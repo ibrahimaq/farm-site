@@ -1,0 +1,13 @@
+@use "../components/mixins" as *;
+@use "../custom" as *;
+
+
+@mixin paragraph{
+    font-weight: 300;
+      text-align: justify;
+      text-justify: inter-word;
+      @include media-breakpoint-down(lg) {
+        font-size: 1rem !important;
+        margin-top: 2rem !important;
+      }
+}

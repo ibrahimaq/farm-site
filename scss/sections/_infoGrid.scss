@@ -1,0 +1,48 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/typography" as *;
+
+.info-grid {
+  // padding: 0 auto !important;
+
+   
+
+  &--row div,a {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    
+  }
+  a {
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $gray-700;
+    transition-duration: 250ms !important;
+    &:hover {
+      p {
+        transform: scale(1.15) rotateZ(-10deg);
+        //   transform:rotateZ(-10deg);
+        transition-duration: 250ms;
+        color: inherit;
+      }
+    }
+  }
+
+  img{
+      width: 100%;
+      height: auto;
+  }
+
+  //media queries//
+  @include media-breakpoint-down(md){
+      a{
+          height: 100px;
+          
+          
+      }
+  
+  }
+
+}

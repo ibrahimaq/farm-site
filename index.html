@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learning bootstrap 5 with sass</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  </head>
+
+  <body>
+    
+
+    <!-- /////////////////////// START NAVBAR SECTION /////////////////////////// -->
+
+    <nav
+      class="navbar navbar-expand-md sticky-top navbar-light menu"
+      
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">Our Farm</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item rounded-pill">
+              <a class="nav-link active" aria-current="page" href="#landing"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item rounded-pill">
+              <a class="nav-link" href="#welcome">Welcome</a>
+            </li>
+            <li class="nav-item rounded-pill">
+              <a class="nav-link" href="#thingstodo">Things To Do</a>
+              <!--#thingstodo SHARES THE SAME ID AS #CARDS ~~ scss partial == _cards  SHARES THE SAME ID AS #CARDS -->
+            </li>
+            <li class="nav-item rounded-pill">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- /////////////////////// LANDING SECTION / HERO IMAGE  /////////////////////////// -->
+    <section class="landing" id="landing" style="margin-top: 0">
+      <div class="jumbotron jumbotron-fluid hero-image">
+        <h1 class="display-4">Experience the wildlife.</h1>
+        <a href="#contact" class="btn btn-primary rounded-pill">Visit Us</a>
+      </div>
+      
+      <svg
+        class="wave"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,192L34.3,192C68.6,192,137,192,206,192C274.3,192,343,192,411,202.7C480,213,549,235,617,256C685.7,277,754,299,823,288C891.4,277,960,235,1029,213.3C1097.1,192,1166,192,1234,208C1302.9,224,1371,256,1406,272L1440,288L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- /////////////////////// WELCOME DESCRIPTION AND IMAGE START  /////////////////////////// -->
+
+    <section
+      class="welcome container-fluid d-flex align-items-center"
+      id="welcome"
+    >
+      <div class="container border">
+        <div class="row">
+          <div class="col-md-6 px-5 pt-4">
+            <div class="welcome-text">
+              <h2>Welcome to our farm&#33;</h2>
+              <p class="lh-base fs-5">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
+                quibusdam est fuga in excepturi, quo voluptatum obcaecati
+                tempore dolores veniam!<br /><br />Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ratione, nostrum quisquam eligendi
+                illum obcaecati sed labore dolores quam beatae rerum dolorem
+                iste quidem alias amet. Quae, molestias quam fugit earum a ad
+                nulla, odit perferendis quas qui nemo amet possimus!<br /><br />Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                nostrum quisquam eligendi illum obcaecati sed labore dolores
+                quam beatae rerum dolorem iste quidem alias amet. Quae,
+                molestias quam fugit earum a ad nulla, odit perferendis quas qui
+                nemo amet possimus!<br /><br />Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Quia, dolor?
+              </p>
+              <a href="#" class="btn btn-primary rounded-pill">Explore</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 text-end">
+            <img
+              src="./images/welcome1.jpg"
+              alt="little girl with a flower pot"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/////// INFO GRID STARTS HERE /////////-->
+    <section id="info-grid" class="info-grid container-fluid">
+      <div class="row info-grid--row d-flex justify-content-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="info-grid--imgContainer">
+            <img src="./images/info-grid-1.jpg" alt="..." class="img-fluid" />
+          </div>
+        </div>
+        <a
+          href="#"
+          class="
+            col-md-4 col-sm-12
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+          style="background-color: #9898ab"
+        >
+          <p class="h4">plan your visit</p>
+        </a>
+        <div class="col-md-4 col-sm-12">
+          <div class="info-grid--imgContainer">
+            <img src="./images/info-grid-2.jpg" alt="..." class="img-fluid" />
+          </div>
+        </div>
+        <a
+          href="#"
+          class="
+            col-md-4 col-sm-12
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+          style="background-color: #887544"
+        >
+          <p class="h4">events calendar</p>
+        </a>
+        <div class="col-md-4 col-sm-12">
+          <div class="info-grid--imgContainer">
+            <img src="./images/info-grid-3.jpg" alt="..." class="img-fluid" />
+          </div>
+        </div>
+        <a
+          href="#"
+          class="
+            col-md-4 col-sm-12
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+          style="background-color: #46ad42"
+        >
+          <p class="h4">annual pass</p>
+        </a>
+      </div>
+    </section>
+
+    <!--////////////////// CARDS START HERE ///////////////////////-->
+
+    <section id="thingstodo">
+      <div class="container">
+        <div class="card-group">
+          <div class="card mx-2">
+            <div class="image-container">
+              <img
+                src="./images/card1.jpg"
+                class="card-img-top img-fluid"
+                alt="..."
+              />
+            </div>
+            <a href="#" target="_blank"
+              ><div class="card-body">
+                <div class="card-title">
+                  <h5>What's on?</h5>
+                  <i class="fas fa-chevron-right lh-base"></i>
+                </div>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos quis exercitationem aperiam, maiores explicabo
+                  ipsum autem esse. Quidem, repellat libero!
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="card mx-2">
+            <div class="image-container">
+              <img
+                src="./images/card2.jpg"
+                class="card-img-top img-fluid"
+                alt="..."
+              />
+            </div>
+            <a href="#" target="_blank"
+              ><div class="card-body">
+                <div class="card-title">
+                  <h5>Food and Drinks</h5>
+                  <i class="fas fa-chevron-right lh-base"></i>
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias placeat illo voluptate. Non necessitatibus alias sed
+                  cum odit atque aperiam?
+                </p>
+              </div></a
+            >
+          </div>
+          <div class="card mx-2">
+            <div class="image-container">
+              <img
+                src="./images/card3.jpeg"
+                class="card-img-top img-fluid"
+                alt="..."
+              />
+            </div>
+            <a href="#" target="_blank">
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>Go behind the scenes</h5>
+                  <i class="fas fa-chevron-right lh-base"></i>
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias placeat illo voluptate. Non necessitatibus alias sed
+                  cum odit atque aperiam?
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq container bg-light h-100 pb-5">
+      <div class=" py-4">
+        <div class="row text-center">
+          <h2 class="display-3">Frequently Asked Questions</h2>
+          <div class="heading-line"></div>
+        </div>
+      </div>
+      <!-- accordion starts here -->
+      <div class="accordion container d-block" id="accordionBasic">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="accordion-item shadow rounded">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Are you open throughout the year?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sunt sequi atque veniam asperiores expedita facere dolores voluptate necessitatibus totam facilis impedit amet, ea accusamus, at beatae hic voluptatem ipsam.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item shadow rounded">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Do you do group bookings?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionBasic">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, corporis! Laudantium, rerum ipsum similique sed quos esse consequatur error exercitationem eaque, qui quam perspiciatis ratione perferendis obcaecati. Harum, voluptas dolorem!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item shadow rounded">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Do you have disabled-friendly access?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree" data-bs-parent="#accordionBasic">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptate eaque iusto doloribus, adipisci facilis, eos repudiandae dolorem quisquam pariatur est hic reprehenderit voluptas neque perferendis at! Aliquid, odio est?
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item shadow rounded">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Can I pay at the door?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingFour" data-bs-parent="#accordionBasic">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptate eaque iusto doloribus, adipisci facilis, eos repudiandae dolorem quisquam pariatur est hic reprehenderit voluptas neque perferendis at! Aliquid, odio est?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /////////CONTACT US SECTION STARTS HERE////////// -->
+
+    <section class="contact" id="contact">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 py-4">
+              <h1 class="text-center">GET IN TOUCH</h1>
+            </div>
+          </div>
+          <div class="row contact contactRow mt-5">
+            <!--.contactRow is the row containing 3 contact boxes -->
+            <div class="col-md-4 text-center">
+              <span><i class="fas fa-phone-alt"></i></span>
+              <h3>PHONE</h3>
+              <p>0208 123 4567</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <span><i class="fas fa-comment-dots"></i></span>
+              <h3>EMAIL</h3>
+              <p>somefarm@something.com</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <span><i class="fas fa-globe-europe"></i></span>
+              <h3>ADDRESS</h3>
+              <p>1 Some Street<br />Some Town<br />PO5T C0D</p>
+            </div>
+          </div>
+
+          <!--////// SOCIAL MEDIA /////-->
+
+          <div class="row socialMedia py-5">
+            <div class="col-md-6 socialMedia-text text-center">
+              <p class="lead my-auto fst-italic">Follow us on social media!</p>
+            </div>
+            <div class="col-md-6 socialMedia-icons my-auto">
+              <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  COPYRIGHT -->
+      <div class="footer-sm container-fluid">
+        <div class="policies d-flex align-items-center">
+          <a class="policies-item" href="#">Privacy Policy</a>
+          <a class="policies-item" href="#">Cookie Policy</a>
+          <a class="policies-item" href="#">GDPR</a>
+        </div>
+
+        <div class="copyright text-center">
+          <p class="my-auto">Copyright 2021</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    
+  </body>
+</html>

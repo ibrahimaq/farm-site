@@ -1,0 +1,11 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/typography" as *;
+
+@include media-breakpoint-down(sm){
+    #faq{
+        h2{
+            font-size: 1.8rem;
+        }
+    }
+}

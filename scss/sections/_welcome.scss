@@ -1,0 +1,56 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/typography" as *;
+
+#welcome {
+  min-height: 90vh;
+  background-color: #fff;
+  // overflow: auto;
+  
+  // @include media-breakpoint-down(md){
+  //   height: 100%;
+  // }
+
+  .container{
+    background-color: $beige;
+    
+    border-radius: 5px;
+    padding-bottom: 1.5rem;
+
+  //   @include media-breakpoint-down(md){
+  //   padding: 0
+  // }
+    
+  }
+  
+  .welcome-text {
+    color: black;
+    @include media-breakpoint-down(md){
+      padding-bottom: 1.5rem;
+    }
+
+   
+
+    p {
+      @include paragraph;
+    }
+  }
+
+  // img{
+  //   max-height: 80%;
+  //   width: auto;
+  // }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

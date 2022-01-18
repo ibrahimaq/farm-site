@@ -1,0 +1,53 @@
+@use "../custom" as *;
+
+.menu {
+  background-color: $primary !important;
+  height: 10vh;
+
+  -webkit-box-shadow: 0px 0px 23px -2px #000000;
+  box-shadow: 0px 0px 23px -2px #000000;
+
+  .navbar-brand {
+    color: $secondary;
+  }
+
+  ul{
+    background-color: $primary;
+  }
+
+  li {
+    padding: 0 0.75rem;
+    margin-left: 1rem;
+    background-color: $primary;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+
+    a {
+      color: $secondary !important;
+      font-weight: 600;
+      transition-duration: 250ms;
+      transition-timing-function: ease-in-out;
+      position: relative;
+
+      // hover effect //
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        margin: -5px 0;
+        background-color: $secondary;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.4s ease-in-out 0s;
+      }
+
+      &:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+}

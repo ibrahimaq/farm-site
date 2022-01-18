@@ -1,0 +1,21 @@
+@use "custom";
+
+// IMPORT COMPONENTS
+
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+// IMPORT SECTIONS
+
+@use "sections/body";
+@use "sections/cards";
+@use "sections/faq";
+@use "sections/infoGrid";
+
+@use "sections/footer";
+@use "sections/subscribe";
+@use "sections/landing";
+@use "sections/navbar";
+@use "sections/welcome";

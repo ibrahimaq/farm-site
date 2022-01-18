@@ -1,0 +1,45 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.landing {
+  height: 90vh !important;
+
+  @include media-breakpoint-down(md) {
+    height: 40vh;
+  }
+
+  /* The hero image */
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("../../images/hero-image4.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .display-4 {
+      text-align: center;
+      @include absoluteCenter;
+      top: 40%;
+      color: white;
+      z-index: 101;
+      @include media-breakpoint-down(md) {
+        top: 35%;
+        font-size: 1.2rem;
+      }
+    }
+
+    a {
+      @include absoluteCenter;
+      
+    }
+  }
+
+  .wave {
+    position: absolute;
+    transform: translate(0, -100%);
+    z-index: 100;
+
+  }
+}
