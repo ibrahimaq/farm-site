@@ -32,6 +32,7 @@
 
     a {
       @include absoluteCenter;
+      z-index: 99;
       
     }
   }
